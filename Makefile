@@ -10,6 +10,7 @@ PATH:=$(shell dirname $(DTC)):$(PATH)
 
 AT91SAM9X5EK_DTBO_OBJECTS:= $(patsubst %.dtso,%.dtbo,$(wildcard at91sam9x5ek/*.dtso))
 SAM9X60EK_DTBO_OBJECTS:= $(patsubst %.dtso,%.dtbo,$(wildcard sam9x60ek/*.dtso))
+NCX1_MK1_DTBO_OBJECTS:= $(patsubst %.dtso,%.dtbo,$(wildcard ncx1_mk1/*.dtso))
 SAMA5D27_SOM1_EK_DTBO_OBJECTS:= $(patsubst %.dtso,%.dtbo,$(wildcard sama5d27_som1_ek/*.dtso))
 SAMA5D27_WLSOM1_EK_DTBO_OBJECTS:= $(patsubst %.dtso,%.dtbo,$(wildcard sama5d27_wlsom1_ek/*.dtso))
 SAMA5D2_ICP_DTBO_OBJECTS:= $(patsubst %.dtso,%.dtbo,$(wildcard sama5d2_icp/*.dtso))
@@ -32,6 +33,8 @@ SAMA7G5EK_DTBO_OBJECTS:= $(patsubst %.dtso,%.dtbo,$(wildcard sama7g5ek/*.dtso))
 at91sam9x5ek_dtbos: $(AT91SAM9X5EK_DTBO_OBJECTS)
 
 sam9x60ek_dtbos: $(SAM9X60EK_DTBO_OBJECTS)
+
+ncx1_mk1_dtbos: $(NCX1_MK1_DTBO_OBJECTS)
 
 sama5d27_som1_ek_dtbos: $(SAMA5D27_SOM1_EK_DTBO_OBJECTS)
 
